@@ -8,7 +8,17 @@
 import UIKit
 
 final class ImagesListViewController: UIViewController {
+    // MARK: - Private properties & IBOutlet
+    
     @IBOutlet private weak var tableView: UITableView!
+    
+    // MARK: - Light content
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
+    
+    // MARK: - Lifecycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -16,6 +26,11 @@ final class ImagesListViewController: UIViewController {
     }
 }
 
+    // MARK: - Private functions
+
+
+    // MARK: - Extensions
 extension ImagesListViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
     }
+}
