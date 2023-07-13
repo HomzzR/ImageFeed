@@ -127,6 +127,9 @@
                                 <rect key="frame" x="374" y="103" width="24" height="24"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" image="logout_button"/>
+                                <connections>
+                                    <action selector="didTapLogoutButton:" destination="up7-hj-Hbr" eventType="touchUpInside" id="aOh-Of-SXG"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello, World!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5os-wt-My5" userLabel="Description Label">
                                 <rect key="frame" x="16" y="218" width="382" height="16"/>
@@ -154,6 +157,13 @@
                             <constraint firstItem="5os-wt-My5" firstAttribute="top" secondItem="fLu-n7-bzE" secondAttribute="bottom" constant="8" id="vge-Mi-c00"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="avatarImageView" destination="LOM-d7-XVK" id="TOu-Lj-PuX"/>
+                        <outlet property="descriptionLabel" destination="5os-wt-My5" id="vwk-ay-gtX"/>
+                        <outlet property="loginLabel" destination="fLu-n7-bzE" id="mjs-IQ-fNh"/>
+                        <outlet property="logoutButton" destination="LET-M3-kDq" id="Myq-sm-f2r"/>
+                        <outlet property="nameLabel" destination="hSq-V7-ODw" id="mXN-yq-iT9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6de-BA-1qF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
