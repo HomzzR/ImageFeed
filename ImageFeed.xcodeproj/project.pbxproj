@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		374A105A2A54878A00452531 /* ImagesListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374A10592A54878A00452531 /* ImagesListCell.swift */; };
+		3763D4E92A6060E7000D0D39 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3763D4E82A6060E7000D0D39 /* ProfileViewController.swift */; };
 		37E814232A51EF5700C272A6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E814222A51EF5700C272A6 /* AppDelegate.swift */; };
 		37E814252A51EF5700C272A6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E814242A51EF5700C272A6 /* SceneDelegate.swift */; };
 		37E814272A51EF5700C272A6 /* ImagesListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E814262A51EF5700C272A6 /* ImagesListViewController.swift */; };
@@ -18,6 +19,7 @@
 
 /* Begin PBXFileReference section */
 		374A10592A54878A00452531 /* ImagesListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagesListCell.swift; sourceTree = "<group>"; };
+		3763D4E82A6060E7000D0D39 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		37E8141F2A51EF5700C272A6 /* ImageFeed.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ImageFeed.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		37E814222A51EF5700C272A6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		37E814242A51EF5700C272A6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -51,6 +53,7 @@
 		3763D4E72A6060A7000D0D39 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
+				3763D4E82A6060E7000D0D39 /* ProfileViewController.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -159,6 +162,7 @@
 			files = (
 				37E814272A51EF5700C272A6 /* ImagesListViewController.swift in Sources */,
 				374A105A2A54878A00452531 /* ImagesListCell.swift in Sources */,
+				3763D4E92A6060E7000D0D39 /* ProfileViewController.swift in Sources */,
 				37E814232A51EF5700C272A6 /* AppDelegate.swift in Sources */,
 				37E814252A51EF5700C272A6 /* SceneDelegate.swift in Sources */,
 			);
