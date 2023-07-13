@@ -48,6 +48,13 @@
 			path = ImagesList;
 			sourceTree = "<group>";
 		};
+		3763D4E72A6060A7000D0D39 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
 		37E814162A51EF5700C272A6 = {
 			isa = PBXGroup;
 			children = (
@@ -69,6 +76,7 @@
 			children = (
 				37E814222A51EF5700C272A6 /* AppDelegate.swift */,
 				37E814242A51EF5700C272A6 /* SceneDelegate.swift */,
+				3763D4E72A6060A7000D0D39 /* Profile */,
 				374A105B2A54879400452531 /* ImagesList */,
 				37E814282A51EF5700C272A6 /* Main.storyboard */,
 				37E8142B2A51EF5800C272A6 /* Assets.xcassets */,
