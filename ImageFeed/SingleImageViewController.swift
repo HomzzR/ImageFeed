@@ -9,5 +9,5 @@ import UIKit
 
 final class SingleImageViewController: UIViewController {
     
-    @IBOutlet private weak var imageView: UIImageView!
+    @IBOutlet weak var imageView: UIImageView!
 }
