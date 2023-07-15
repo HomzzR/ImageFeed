@@ -31,5 +31,16 @@ final class ProfileViewController: UIViewController {
         imageView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 32).isActive = true
         imageView.heightAnchor.constraint(equalToConstant: 70).isActive = true
         imageView.widthAnchor.constraint(equalToConstant: 70).isActive = true
+        
+        // Имя пользователя
+        let nameLabel = UILabel()
+        nameLabel.textColor = .white
+        nameLabel.text = "Екатерина Новикова"
+        nameLabel.font = .boldSystemFont(ofSize: 23)
+        nameLabel.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(nameLabel)
+        
+        nameLabel.leadingAnchor.constraint(equalTo: imageView.leadingAnchor).isActive = true
+        nameLabel.topAnchor.constraint(equalTo: imageView.bottomAnchor, constant: 8).isActive = true
     }
 }
