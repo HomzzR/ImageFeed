@@ -23,7 +23,7 @@ final class ProfileViewController: UIViewController {
         // Аватар
         let profileImage = UIImage(named: "avatar")
         let imageView = UIImageView(image: profileImage)
-        imageView.tintColor = .gray
+        imageView.tintColor = .ypGray
         imageView.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(imageView)
         
@@ -34,7 +34,7 @@ final class ProfileViewController: UIViewController {
         
         // Имя пользователя
         let nameLabel = UILabel()
-        nameLabel.textColor = .white
+        nameLabel.textColor = .ypWhite
         nameLabel.text = "Екатерина Новикова"
         nameLabel.font = .boldSystemFont(ofSize: 23)
         nameLabel.translatesAutoresizingMaskIntoConstraints = false
@@ -45,7 +45,7 @@ final class ProfileViewController: UIViewController {
         
         // Логин
         let loginLabel = UILabel()
-        loginLabel.textColor = .gray
+        loginLabel.textColor = .ypGray
         loginLabel.text = "@ekaterina_nov"
         loginLabel.font = .systemFont(ofSize: 13)
         loginLabel.translatesAutoresizingMaskIntoConstraints = false
@@ -56,7 +56,7 @@ final class ProfileViewController: UIViewController {
         
         // Описание
         let descriptionLabel = UILabel()
-        descriptionLabel.textColor = .white
+        descriptionLabel.textColor = .ypWhite
         descriptionLabel.text = "Hello, world!"
         descriptionLabel.font = .systemFont(ofSize: 13)
         descriptionLabel.translatesAutoresizingMaskIntoConstraints = false
@@ -64,5 +64,18 @@ final class ProfileViewController: UIViewController {
         
         descriptionLabel.leadingAnchor.constraint(equalTo: imageView.leadingAnchor).isActive = true
         descriptionLabel.topAnchor.constraint(equalTo: loginLabel.bottomAnchor, constant: 8).isActive = true
+        
+        // Кнопка выхода из профиля
+        let logoutButton = UIButton.systemButton(
+            with: UIImage(named: "logout_button")!,
+            target: self,
+            action: nil
+        )
+        logoutButton.tintColor = .ypRed
+        logoutButton.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(logoutButton)
+        
+        logoutButton.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -16).isActive = true
+        logoutButton.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 55).isActive = true
     }
 }
