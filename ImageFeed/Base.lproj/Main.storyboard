@@ -108,18 +108,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8FR-sj-Vcn">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" minimumZoomScale="0.0" translatesAutoresizingMaskIntoConstraints="NO" id="8FR-sj-Vcn">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="0" translatesAutoresizingMaskIntoConstraints="NO" id="zRS-Di-LQj">
-                                        <rect key="frame" x="0.0" y="0.0" width="200" height="132"/>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="414" placeholderIntrinsicHeight="414" image="0" translatesAutoresizingMaskIntoConstraints="NO" id="zRS-Di-LQj">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="414"/>
                                     </imageView>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="zRS-Di-LQj" secondAttribute="bottom" id="5ib-NU-da2"/>
-                                    <constraint firstAttribute="trailing" secondItem="zRS-Di-LQj" secondAttribute="trailing" id="7ZH-6i-Fp8"/>
-                                    <constraint firstItem="zRS-Di-LQj" firstAttribute="leading" secondItem="8FR-sj-Vcn" secondAttribute="leading" id="sto-Tr-Bx7"/>
-                                    <constraint firstItem="zRS-Di-LQj" firstAttribute="top" secondItem="8FR-sj-Vcn" secondAttribute="top" id="zDh-xW-J6y"/>
+                                    <constraint firstAttribute="bottom" secondItem="zRS-Di-LQj" secondAttribute="bottom" id="P3m-Hp-64t"/>
+                                    <constraint firstItem="zRS-Di-LQj" firstAttribute="trailing" secondItem="8FR-sj-Vcn" secondAttribute="trailing" id="b2b-8h-x8P"/>
+                                    <constraint firstItem="zRS-Di-LQj" firstAttribute="top" secondItem="8FR-sj-Vcn" secondAttribute="top" id="kYe-Ge-SFK"/>
+                                    <constraint firstItem="zRS-Di-LQj" firstAttribute="leading" secondItem="8FR-sj-Vcn" secondAttribute="leading" id="u0m-C2-18e"/>
                                 </constraints>
                                 <viewLayoutGuide key="contentLayoutGuide" id="LqM-O1-H2s"/>
                                 <viewLayoutGuide key="frameLayoutGuide" id="dXr-9e-B8Y"/>
@@ -139,10 +139,13 @@
                                     <action selector="didTapBackButton:" destination="HMV-XO-kOh" eventType="touchUpInside" id="xM6-tq-cYt"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jpq-SC-cSC" userLabel="DownloadButton">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jpq-SC-cSC" userLabel="ShareButton">
                                 <rect key="frame" x="192" y="830" width="30" height="30"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" image="download_button"/>
+                                <connections>
+                                    <action selector="didTapShareButton:" destination="HMV-XO-kOh" eventType="touchUpInside" id="ET4-Gv-Nc3"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="EtB-Oy-Yhd"/>
@@ -150,11 +153,11 @@
                         <constraints>
                             <constraint firstItem="01x-Hk-Cun" firstAttribute="top" secondItem="EtB-Oy-Yhd" secondAttribute="top" constant="8" id="6yH-CO-xpp"/>
                             <constraint firstItem="01x-Hk-Cun" firstAttribute="leading" secondItem="EtB-Oy-Yhd" secondAttribute="leading" constant="8" id="Dx3-Wh-oW4"/>
-                            <constraint firstAttribute="trailing" secondItem="8FR-sj-Vcn" secondAttribute="trailing" id="P9P-xg-xra"/>
+                            <constraint firstItem="EtB-Oy-Yhd" firstAttribute="trailing" secondItem="8FR-sj-Vcn" secondAttribute="trailing" id="P9P-xg-xra"/>
                             <constraint firstItem="8FR-sj-Vcn" firstAttribute="top" secondItem="n0D-dl-bhC" secondAttribute="top" id="cxd-CX-29R"/>
                             <constraint firstItem="EtB-Oy-Yhd" firstAttribute="bottom" secondItem="jpq-SC-cSC" secondAttribute="bottom" constant="36" id="dfa-Ud-F58"/>
                             <constraint firstItem="jpq-SC-cSC" firstAttribute="centerX" secondItem="EtB-Oy-Yhd" secondAttribute="centerX" id="i74-Jx-saE"/>
-                            <constraint firstItem="8FR-sj-Vcn" firstAttribute="leading" secondItem="n0D-dl-bhC" secondAttribute="leading" id="iHg-SH-T4F"/>
+                            <constraint firstItem="8FR-sj-Vcn" firstAttribute="leading" secondItem="EtB-Oy-Yhd" secondAttribute="leading" id="iHg-SH-T4F"/>
                             <constraint firstAttribute="bottom" secondItem="8FR-sj-Vcn" secondAttribute="bottom" id="wb2-0x-ov0"/>
                         </constraints>
                     </view>
