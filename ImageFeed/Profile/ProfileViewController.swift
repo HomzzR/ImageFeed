@@ -53,5 +53,16 @@ final class ProfileViewController: UIViewController {
         
         loginLabel.leadingAnchor.constraint(equalTo: imageView.leadingAnchor).isActive = true
         loginLabel.topAnchor.constraint(equalTo: nameLabel.bottomAnchor, constant: 8).isActive = true
+        
+        // Описание
+        let descriptionLabel = UILabel()
+        descriptionLabel.textColor = .white
+        descriptionLabel.text = "Hello, world!"
+        descriptionLabel.font = .systemFont(ofSize: 13)
+        descriptionLabel.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(descriptionLabel)
+        
+        descriptionLabel.leadingAnchor.constraint(equalTo: imageView.leadingAnchor).isActive = true
+        descriptionLabel.topAnchor.constraint(equalTo: loginLabel.bottomAnchor, constant: 8).isActive = true
     }
 }
