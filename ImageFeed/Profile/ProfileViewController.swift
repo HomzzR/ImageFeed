@@ -9,15 +9,27 @@ import UIKit
 
 final class ProfileViewController: UIViewController {
     
-    @IBOutlet private weak var descriptionLabel: UILabel!
-    @IBOutlet private weak var avatarImageView: UIImageView!
-    @IBOutlet private weak var loginLabel: UILabel!
-    @IBOutlet private weak var nameLabel: UILabel!
-    @IBOutlet private weak var logoutButton: UIButton!
+    // MARK: - Light content
     
-    
-    @IBAction private func didTapLogoutButton(_ sender: Any) {
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
     }
     
+    // MARK: - Lifecycle
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        // Аватар
+        let profileImage = UIImage(named: "avatar")
+        let imageView = UIImageView(image: profileImage)
+        imageView.tintColor = .gray
+        imageView.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(imageView)
+        
+        imageView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 16).isActive = true
+        imageView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 32).isActive = true
+        imageView.heightAnchor.constraint(equalToConstant: 70).isActive = true
+        imageView.widthAnchor.constraint(equalToConstant: 70).isActive = true
+    }
 }

@@ -21,6 +21,12 @@ final class SingleImageViewController: UIViewController {
     @IBOutlet private weak var imageView: UIImageView!
     @IBOutlet weak var scrollView: UIScrollView!
     
+    // MARK: - Light content
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
+    
     // MARK: - Lifecycle
     
     override func viewDidLoad() {
