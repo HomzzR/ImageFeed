@@ -42,5 +42,16 @@ final class ProfileViewController: UIViewController {
         
         nameLabel.leadingAnchor.constraint(equalTo: imageView.leadingAnchor).isActive = true
         nameLabel.topAnchor.constraint(equalTo: imageView.bottomAnchor, constant: 8).isActive = true
+        
+        // Логин
+        let loginLabel = UILabel()
+        loginLabel.textColor = .gray
+        loginLabel.text = "@ekaterina_nov"
+        loginLabel.font = .systemFont(ofSize: 13)
+        loginLabel.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(loginLabel)
+        
+        loginLabel.leadingAnchor.constraint(equalTo: imageView.leadingAnchor).isActive = true
+        loginLabel.topAnchor.constraint(equalTo: nameLabel.bottomAnchor, constant: 8).isActive = true
     }
 }
