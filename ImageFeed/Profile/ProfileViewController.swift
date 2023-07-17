@@ -65,6 +65,7 @@ final class ProfileViewController: UIViewController {
         
         nameLabel.leadingAnchor.constraint(equalTo: avatarImage.leadingAnchor).isActive = true
         nameLabel.topAnchor.constraint(equalTo: avatarImage.bottomAnchor, constant: 8).isActive = true
+        nameLabel.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: 16).isActive = true
     }
     
     // Логин
@@ -78,6 +79,7 @@ final class ProfileViewController: UIViewController {
         
         loginLabel.leadingAnchor.constraint(equalTo: nameLabel.leadingAnchor).isActive = true
         loginLabel.topAnchor.constraint(equalTo: nameLabel.bottomAnchor, constant: 8).isActive = true
+        loginLabel.trailingAnchor.constraint(equalTo: nameLabel.trailingAnchor).isActive = true
     }
     
     // Описание
@@ -91,6 +93,7 @@ final class ProfileViewController: UIViewController {
         
         descriptionLabel.leadingAnchor.constraint(equalTo: nameLabel.leadingAnchor).isActive = true
         descriptionLabel.topAnchor.constraint(equalTo: loginLabel.bottomAnchor, constant: 8).isActive = true
+        descriptionLabel.trailingAnchor.constraint(equalTo: nameLabel.trailingAnchor).isActive = true
     }
     
     // Кнопка выхода из профиля
