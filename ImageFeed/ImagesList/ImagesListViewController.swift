@@ -14,10 +14,11 @@ final class ImagesListViewController: UIViewController {
     private let photosName: [String] = Array(0..<20).map{ "\($0)" }
     private lazy var dateFormatter: DateFormatter = {
         let formatter = DateFormatter()
-        formatter.dateStyle = .long
-        formatter.timeStyle = .none
+        formatter.dateFormat = "dd MMMM yyyy"
+        formatter.locale = Locale(identifier: "ru_RU")
         return formatter
     }()
+    private let ShowSingleImageSegueIdentifier = "showSingleImage"
     
     // MARK: - Light content
     
@@ -32,6 +33,18 @@ final class ImagesListViewController: UIViewController {
         tableView.contentInset = UIEdgeInsets(top: 12, left: 0, bottom: 12, right: 0)
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == ShowSingleImageSegueIdentifier {
+            guard segue.identifier == ShowSingleImageSegueIdentifier,
+                  let viewController = segue.destination as? SingleImageViewController,
+                  let indexPath = sender as? IndexPath else {
+                super.prepare(for: segue, sender: sender)
+                return
+            }
+            let image = UIImage(named: photosName[indexPath.row])
+            viewController.image = image
+        }
+    }
     // MARK: - Private functions
     
     private func configCell(for cell: ImagesListCell, with indexPath: IndexPath) {
@@ -53,6 +66,7 @@ final class ImagesListViewController: UIViewController {
 extension ImagesListViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+        performSegue(withIdentifier: ShowSingleImageSegueIdentifier, sender: indexPath)
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
