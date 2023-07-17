@@ -35,12 +35,14 @@ final class ImagesListViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == ShowSingleImageSegueIdentifier {
-            let viewController = segue.destination as! SingleImageViewController
-            let indexPath = sender as! IndexPath
+            guard segue.identifier == ShowSingleImageSegueIdentifier,
+                  let viewController = segue.destination as? SingleImageViewController,
+                  let indexPath = sender as? IndexPath else {
+                super.prepare(for: segue, sender: sender)
+                return
+            }
             let image = UIImage(named: photosName[indexPath.row])
             viewController.image = image
-        } else {
-            super.prepare(for: segue, sender: sender)
         }
     }
     // MARK: - Private functions
