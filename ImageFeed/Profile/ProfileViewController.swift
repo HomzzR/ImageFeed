@@ -43,6 +43,8 @@ final class ProfileViewController: UIViewController {
         avatarImage = UIImageView()
         avatarImage.image = UIImage(named: "avatar")
         avatarImage.tintColor = .ypGray
+        avatarImage.layer.cornerRadius = 35
+        avatarImage.clipsToBounds = true
         avatarImage.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(avatarImage)
         
