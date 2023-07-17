@@ -18,7 +18,7 @@ final class ImagesListViewController: UIViewController {
         formatter.locale = Locale(identifier: "ru_RU")
         return formatter
     }()
-    private let ShowSingleImageSegueIdentifier = "ShowSingleImage"
+    private let ShowSingleImageSegueIdentifier = "showSingleImage"
     
     // MARK: - Light content
     
