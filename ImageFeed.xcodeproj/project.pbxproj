@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		374A105A2A54878A00452531 /* ImagesListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374A10592A54878A00452531 /* ImagesListCell.swift */; };
+		375FA7842A7454E10084B935 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 375FA7832A7454E10084B935 /* Constants.swift */; };
 		3763D4E92A6060E7000D0D39 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3763D4E82A6060E7000D0D39 /* ProfileViewController.swift */; };
 		37D1F4C52A61B05C00216D3F /* UIColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D1F4C42A61B05C00216D3F /* UIColors.swift */; };
 		37D1F4C92A61B5DA00216D3F /* SingleImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D1F4C82A61B5DA00216D3F /* SingleImageViewController.swift */; };
@@ -21,6 +22,7 @@
 
 /* Begin PBXFileReference section */
 		374A10592A54878A00452531 /* ImagesListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagesListCell.swift; sourceTree = "<group>"; };
+		375FA7832A7454E10084B935 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		3763D4E82A6060E7000D0D39 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		37D1F4C42A61B05C00216D3F /* UIColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColors.swift; sourceTree = "<group>"; };
 		37D1F4C82A61B5DA00216D3F /* SingleImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleImageViewController.swift; sourceTree = "<group>"; };
@@ -99,6 +101,7 @@
 			children = (
 				37D1F4C72A61B07900216D3F /* Helpers */,
 				37E814222A51EF5700C272A6 /* AppDelegate.swift */,
+				375FA7832A7454E10084B935 /* Constants.swift */,
 				37E814242A51EF5700C272A6 /* SceneDelegate.swift */,
 				3763D4E72A6060A7000D0D39 /* Profile */,
 				374A105B2A54879400452531 /* ImagesList */,
@@ -189,6 +192,7 @@
 				37E814232A51EF5700C272A6 /* AppDelegate.swift in Sources */,
 				37E814252A51EF5700C272A6 /* SceneDelegate.swift in Sources */,
 				37D1F4C52A61B05C00216D3F /* UIColors.swift in Sources */,
+				375FA7842A7454E10084B935 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
