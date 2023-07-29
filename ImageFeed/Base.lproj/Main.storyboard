@@ -297,16 +297,33 @@
                                     <wkPreferences key="preferences"/>
                                 </wkWebViewConfiguration>
                             </wkWebView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3f2-Hn-be8">
+                                <rect key="frame" x="0.0" y="0.0" width="64" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="2TT-ru-HIm"/>
+                                    <constraint firstAttribute="width" constant="64" id="BHH-K5-2QY"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" image="nav_back_button"/>
+                                <connections>
+                                    <action selector="didTapBackButton:" destination="SoU-AT-jaI" eventType="touchUpInside" id="EqH-nf-QFT"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="AeY-sw-ZIk"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="KYN-rt-U75" firstAttribute="leading" secondItem="AeY-sw-ZIk" secondAttribute="leading" id="BEW-TT-V4e"/>
-                            <constraint firstItem="AeY-sw-ZIk" firstAttribute="bottom" secondItem="KYN-rt-U75" secondAttribute="bottom" id="SDM-m1-9wk"/>
-                            <constraint firstItem="KYN-rt-U75" firstAttribute="top" secondItem="AeY-sw-ZIk" secondAttribute="top" id="Woa-Hs-YVq"/>
-                            <constraint firstItem="AeY-sw-ZIk" firstAttribute="trailing" secondItem="KYN-rt-U75" secondAttribute="trailing" id="Xyp-YU-JVW"/>
+                            <constraint firstItem="3f2-Hn-be8" firstAttribute="top" secondItem="AeY-sw-ZIk" secondAttribute="top" id="9Cc-7d-ZJY"/>
+                            <constraint firstItem="KYN-rt-U75" firstAttribute="leading" secondItem="4fO-br-lAx" secondAttribute="leading" id="BEW-TT-V4e"/>
+                            <constraint firstItem="3f2-Hn-be8" firstAttribute="leading" secondItem="AeY-sw-ZIk" secondAttribute="leading" id="JlX-1t-nxJ"/>
+                            <constraint firstAttribute="bottom" secondItem="KYN-rt-U75" secondAttribute="bottom" id="SDM-m1-9wk"/>
+                            <constraint firstItem="KYN-rt-U75" firstAttribute="top" secondItem="4fO-br-lAx" secondAttribute="top" id="Woa-Hs-YVq"/>
+                            <constraint firstAttribute="trailing" secondItem="KYN-rt-U75" secondAttribute="trailing" id="Xyp-YU-JVW"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="webView" destination="KYN-rt-U75" id="8NU-83-UsD"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YKo-4g-VqA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -319,6 +336,7 @@
         <image name="auth_screen_logo" width="60" height="60"/>
         <image name="chevron.backward" width="9" height="16"/>
         <image name="like_button_on" width="42" height="42"/>
+        <image name="nav_back_button" width="9" height="16"/>
         <image name="tab_editorial_active" width="30" height="30"/>
         <image name="tab_profile_active" width="30" height="30"/>
         <namedColor name="YP Black">
