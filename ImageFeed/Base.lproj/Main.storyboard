@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="mXz-jN-xZh">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="stj-EP-Ad9">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -98,7 +99,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <exit id="aZb-OP-lha" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="-646" y="-330"/>
+            <point key="canvasLocation" x="263.768115942029" y="-330.13392857142856"/>
         </scene>
         <!--SingleImage-->
         <scene sceneID="yl8-08-cW7">
@@ -169,7 +170,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uX3-Dz-w33" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="186.95652173913044" y="-330.13392857142856"/>
+            <point key="canvasLocation" x="1097.1014492753625" y="-330.13392857142856"/>
         </scene>
         <!--Profile-->
         <scene sceneID="KA6-aJ-8vq">
@@ -185,12 +186,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6de-BA-1qF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-646" y="410"/>
+            <point key="canvasLocation" x="263.768115942029" y="409.82142857142856"/>
         </scene>
-        <!--View Controller-->
+        <!--Auth View Controller-->
         <scene sceneID="GvY-iS-aue">
             <objects>
-                <viewController id="mXz-jN-xZh" sceneMemberID="viewController">
+                <viewController id="mXz-jN-xZh" customClass="AuthViewController" customModule="ImageFeed" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="f58-4q-I1K">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -218,6 +219,9 @@
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="SoU-AT-jaI" kind="presentation" identifier="ShowWebView" modalPresentationStyle="overFullScreen" id="ANy-5c-Qd8"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="ipu-hV-pBQ"/>
@@ -231,10 +235,11 @@
                             <constraint firstItem="aEc-dx-9mJ" firstAttribute="centerY" secondItem="f58-4q-I1K" secondAttribute="centerY" id="p2t-J9-5qo"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="XXC-d8-zPi"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bl6-kz-jX7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2522" y="15"/>
+            <point key="canvasLocation" x="-1613.0434782608697" y="14.732142857142856"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="urA-1r-hEt">
@@ -256,7 +261,56 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7zH-14-0Pm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1554" y="16"/>
+            <point key="canvasLocation" x="-644.92753623188412" y="15.401785714285714"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="a1U-mx-iV3">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="stj-EP-Ad9" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="gsV-yl-E05">
+                        <rect key="frame" x="0.0" y="48" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="mXz-jN-xZh" kind="relationship" relationship="rootViewController" id="SiY-LB-sgC"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3gK-Xv-GoQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2523.1884057971015" y="14.732142857142856"/>
+        </scene>
+        <!--Web View View Controller-->
+        <scene sceneID="WdU-kF-93E">
+            <objects>
+                <viewController id="SoU-AT-jaI" customClass="WebViewViewController" customModule="ImageFeed" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4fO-br-lAx">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KYN-rt-U75">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <color key="backgroundColor" name="YP White"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="AeY-sw-ZIk"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="KYN-rt-U75" firstAttribute="leading" secondItem="AeY-sw-ZIk" secondAttribute="leading" id="BEW-TT-V4e"/>
+                            <constraint firstItem="AeY-sw-ZIk" firstAttribute="bottom" secondItem="KYN-rt-U75" secondAttribute="bottom" id="SDM-m1-9wk"/>
+                            <constraint firstItem="KYN-rt-U75" firstAttribute="top" secondItem="AeY-sw-ZIk" secondAttribute="top" id="Woa-Hs-YVq"/>
+                            <constraint firstItem="AeY-sw-ZIk" firstAttribute="trailing" secondItem="KYN-rt-U75" secondAttribute="trailing" id="Xyp-YU-JVW"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YKo-4g-VqA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1613" y="712"/>
         </scene>
     </scenes>
     <resources>
@@ -273,5 +327,8 @@
         <namedColor name="YP White">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
     </resources>
 </document>
