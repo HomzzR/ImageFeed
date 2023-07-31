@@ -8,9 +8,14 @@
 import UIKit
 
 class SplashViewController: UIViewController {
+    
+    // MARK: - Private properties
+    
     private let showAuthenticationScreenSegueIdentifier = "ShowAuthenticationScreen"
     private let oauth2Service = OAuth2Service.sharedService
     private let oauth2TokenStorage = OAuth2TokenStorage()
+    
+    // MARK: - Lifecycle
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
@@ -35,6 +40,8 @@ class SplashViewController: UIViewController {
         .lightContent
     }
     
+    // MARK: - Functions
+    
     func switchToTabBarController() {
         guard let window = UIApplication.shared.windows.first else { assertionFailure("Invalid Configuration")
             return
@@ -46,6 +53,8 @@ class SplashViewController: UIViewController {
         window.rootViewController = tabBarController
     }
 }
+    
+    // MARK: - Extensions
 
 extension SplashViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

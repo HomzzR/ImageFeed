@@ -30,6 +30,8 @@ final class AuthViewController: UIViewController {
     }
 }
 
+    // MARK: - Extensions
+
 extension AuthViewController: WebViewViewControllerDelegate {
     func webViewViewControllerDidCancel(_ vc: WebViewViewController) {
         dismiss(animated: true)

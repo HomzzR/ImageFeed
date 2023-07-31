@@ -8,6 +8,9 @@
 import UIKit
 
 final class OAuth2Service {
+    
+    // MARK: - Private properties
+    
     static let sharedService = OAuth2Service()
     private init() {}
     
@@ -22,6 +25,8 @@ final class OAuth2Service {
             tokenStorage.token = newValue
         }
     }
+    
+    // MARK: - Functions
     
     func fetchOAuthToken(_ code: String, completion: @escaping(Result<String, Error>) -> Void ) {
         let request = authTokenRequest(code: code)
@@ -39,6 +44,8 @@ final class OAuth2Service {
         task.resume()
     }
 }
+
+    // MARK: - Extensions
 
 extension OAuth2Service {
     private func object( for request: URLRequest, completion: @escaping (Result<OAuthTokenResponseBody, Error>) -> Void) -> URLSessionTask {
