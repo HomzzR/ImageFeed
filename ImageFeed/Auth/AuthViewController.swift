@@ -12,15 +12,10 @@ protocol AuthViewControllerDelegate: AnyObject {
 }
 
 final class AuthViewController: UIViewController {
-    
-    // MARK: - Private properties & IBOutlet
-    
     private let showWebViewSegueIdentifier = "ShowWebView"
     let oauth2Service = OAuth2Service.sharedService
     weak var delegate: AuthViewControllerDelegate?
-    
-    // MARK: - Override
-    
+
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == showWebViewSegueIdentifier {
             guard
@@ -34,16 +29,13 @@ final class AuthViewController: UIViewController {
         }
     }
 }
-    
-    // MARK: - Extenstion
 
 extension AuthViewController: WebViewViewControllerDelegate {
-    func webViewViewController(_ vc: WebViewViewController, didAuthenticateWithCode code: String) {
-        //TODO: process code
-    }
-
     func webViewViewControllerDidCancel(_ vc: WebViewViewController) {
         dismiss(animated: true)
     }
+    
+    func webViewViewController(_ vc: WebViewViewController, didAuthenticateWithCode code: String) {
+        delegate?.authViewController(self, didAuthenticateWithCode: code)
+    }
 }
-

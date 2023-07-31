@@ -14,8 +14,7 @@ final class OAuth2Service {
     private let urlSession = URLSession.shared
     
     private let tokenStorage = OAuth2TokenStorage()
-    
-    private (set) var authToken: String? {
+    private (set)  var authToken: String? {
         get {
             return tokenStorage.token
         }
