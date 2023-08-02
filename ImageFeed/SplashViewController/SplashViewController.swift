@@ -54,7 +54,7 @@ final class SplashViewController: UIViewController {
     }
 }
     
-    // MARK: - Extensions
+// MARK: - Extensions
 
 extension SplashViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
