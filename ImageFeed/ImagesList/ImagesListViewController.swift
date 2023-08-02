@@ -61,7 +61,7 @@ final class ImagesListViewController: UIViewController {
     }
 }
 
-    // MARK: - Extensions
+// MARK: - Extensions
 
 extension ImagesListViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

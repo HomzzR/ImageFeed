@@ -8,7 +8,7 @@
 import UIKit
 import WebKit
 
-    // MARK: - Protocol
+// MARK: - Protocol
 
 protocol WebViewViewControllerDelegate: AnyObject {
     func webViewViewController(_ vc: WebViewViewController, didAuthenticateWithCode code: String)
@@ -89,7 +89,7 @@ final class WebViewViewController: UIViewController {
     }
 }
 
-    // MARK: - Extensions
+// MARK: - Extensions
 
 extension WebViewViewController: WKNavigationDelegate {
     func webView(

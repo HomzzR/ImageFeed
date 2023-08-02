@@ -45,7 +45,7 @@ final class OAuth2Service {
     }
 }
 
-    // MARK: - Extensions
+// MARK: - Extensions
 
 extension OAuth2Service {
     private func object( for request: URLRequest, completion: @escaping (Result<OAuthTokenResponseBody, Error>) -> Void) -> URLSessionTask {
