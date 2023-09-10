@@ -65,8 +65,8 @@
                                                     </connections>
                                                 </button>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="16 ноября 2016" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fG3-yw-64Z" userLabel="Date Label">
-                                                    <rect key="frame" x="24" y="191" width="121.5" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <rect key="frame" x="24" y="196" width="96.5" height="16"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                     <color key="textColor" name="YP White"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -218,7 +218,7 @@
                                     <action selector="didTapBackButton:" destination="SoU-AT-jaI" eventType="touchUpInside" id="EqH-nf-QFT"/>
                                 </connections>
                             </button>
-                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="puB-Dv-Lzq">
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="puB-Dv-Lzq">
                                 <rect key="frame" x="0.0" y="44" width="414" height="4"/>
                                 <color key="tintColor" name="YP Black"/>
                             </progressView>
@@ -262,15 +262,15 @@
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ojc-jL-xjS">
-                                <rect key="frame" x="16" y="690" width="382" height="48"/>
+                                <rect key="frame" x="16" y="724" width="382" height="48"/>
                                 <color key="backgroundColor" name="YP White"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="48" id="2ih-Yy-Aom"/>
                                 </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <color key="tintColor" name="YP Black"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="Войти"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Войти"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                         <integer key="value" value="16"/>
@@ -286,7 +286,7 @@
                         <color key="backgroundColor" name="YP Black"/>
                         <constraints>
                             <constraint firstItem="ojc-jL-xjS" firstAttribute="centerX" secondItem="f58-4q-I1K" secondAttribute="centerX" id="Dhe-hC-6m5"/>
-                            <constraint firstItem="ipu-hV-pBQ" firstAttribute="bottom" secondItem="ojc-jL-xjS" secondAttribute="bottom" constant="124" id="UkQ-8I-fks"/>
+                            <constraint firstItem="ipu-hV-pBQ" firstAttribute="bottom" secondItem="ojc-jL-xjS" secondAttribute="bottom" constant="90" id="UkQ-8I-fks"/>
                             <constraint firstItem="ojc-jL-xjS" firstAttribute="leading" secondItem="ipu-hV-pBQ" secondAttribute="leading" constant="16" id="adn-hy-wtX"/>
                             <constraint firstItem="ipu-hV-pBQ" firstAttribute="trailing" secondItem="ojc-jL-xjS" secondAttribute="trailing" constant="16" id="fuT-pf-51H"/>
                             <constraint firstItem="aEc-dx-9mJ" firstAttribute="centerX" secondItem="f58-4q-I1K" secondAttribute="centerX" id="mE9-DE-lwo"/>
