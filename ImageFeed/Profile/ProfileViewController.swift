@@ -43,6 +43,7 @@ final class ProfileViewController: UIViewController {
         updateProfileDetails(profile: profileService.profile)
         updateAvatar()
         checkForAvatarUpdates()
+        view.backgroundColor = .ypBlack
     }
     
     // MARK: - Private functions
