@@ -9,7 +9,8 @@ import UIKit
 import SwiftKeychainWrapper
 
 final class OAuth2TokenStorage {
-
+    // MARK: - Properties
+    
     private let keyChainStorage = KeychainWrapper.standard
 
     var token: String? {
@@ -24,7 +25,13 @@ final class OAuth2TokenStorage {
             }
         }
     }
+    
+    func deleteToken() {
+        keyChainStorage.remove(forKey: "bearerToken")
+    }
 }
+
+// MARK: - Extension
 
 extension String {
     static let tokenKey = "bearerToken"
