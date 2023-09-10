@@ -12,13 +12,15 @@ final class ImagesListViewController: UIViewController {
     
     @IBOutlet private weak var tableView: UITableView!
     private let photosName: [String] = Array(0..<20).map{ "\($0)" }
+    
     private lazy var dateFormatter: DateFormatter = {
         let formatter = DateFormatter()
-        formatter.dateFormat = "dd MMMM yyyy"
-        formatter.locale = Locale(identifier: "ru_RU")
+        formatter.dateStyle = .long
+        formatter.timeStyle = .none
         return formatter
     }()
-    private let ShowSingleImageSegueIdentifier = "ShowSingleImage"
+    
+    private let showSingleImageSegueIdentifier = "ShowSingleImage"
     
     // MARK: - Light content
     
@@ -34,17 +36,16 @@ final class ImagesListViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == ShowSingleImageSegueIdentifier {
-            guard segue.identifier == ShowSingleImageSegueIdentifier,
-                  let viewController = segue.destination as? SingleImageViewController,
-                  let indexPath = sender as? IndexPath else {
-                super.prepare(for: segue, sender: sender)
-                return
-            }
+        if segue.identifier == showSingleImageSegueIdentifier {
+            let viewController = segue.destination as! SingleImageViewController
+            let indexPath = sender as! IndexPath
             let image = UIImage(named: photosName[indexPath.row])
             viewController.image = image
+        } else {
+            super.prepare(for: segue, sender: sender)
         }
     }
+
     // MARK: - Private functions
     
     private func configCell(for cell: ImagesListCell, with indexPath: IndexPath) {
@@ -66,7 +67,7 @@ final class ImagesListViewController: UIViewController {
 extension ImagesListViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        performSegue(withIdentifier: ShowSingleImageSegueIdentifier, sender: indexPath)
+        performSegue(withIdentifier: showSingleImageSegueIdentifier, sender: indexPath)
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 final class ProfileViewController: UIViewController {
     
@@ -16,6 +17,10 @@ final class ProfileViewController: UIViewController {
     private var loginLabel: UILabel!
     private var descriptionLabel: UILabel!
     private var logoutButton: UIButton!
+    
+    private let profileService = ProfileService.shared
+    private let profileImageService = ProfileImageService.shared
+    private var profileImageServiceObserver: NSObjectProtocol?
     
     
     // MARK: - Light content
@@ -34,9 +39,45 @@ final class ProfileViewController: UIViewController {
         loginLabelView(safeArea: view.safeAreaLayoutGuide)
         descriptionLabelView(safeArea: view.safeAreaLayoutGuide)
         logoutButtonView(safeArea: view.safeAreaLayoutGuide)
+        
+        updateProfileDetails(profile: profileService.profile)
+        updateAvatar()
+        checkForAvatarUpdates()
     }
     
     // MARK: - Private functions
+    
+    private func updateProfileDetails(profile: Profile?) {
+        if let profile = profile {
+            nameLabel.text = profile.name
+            loginLabel.text = profile.loginName
+            descriptionLabel.text = profile.bio
+        } else {
+            nameLabel.text = "Error"
+            loginLabel.text = "Error"
+            descriptionLabel.text = "Error"
+        }
+    }
+    
+    private func updateAvatar() {
+        guard let profileImageURL = profileImageService.avatarURL,
+              let url = URL(string: profileImageURL)
+        else { return }
+        let placeholderImage = UIImage(systemName: "avatar")
+        avatarImage.kf.setImage(with: url, placeholder: placeholderImage)
+    }
+    
+    private func checkForAvatarUpdates() {
+        profileImageServiceObserver = NotificationCenter.default.addObserver(
+            forName: ProfileImageService.didChangeNotification,
+            object: nil,
+            queue: .main
+        ) { [weak self] _ in
+            guard let self = self else { return }
+            self.updateAvatar()
+        }
+        updateAvatar()
+    }
     
     // Аватар
     private func avatarImageView(safeArea: UILayoutGuide) {
