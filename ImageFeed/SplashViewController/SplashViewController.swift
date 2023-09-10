@@ -67,7 +67,7 @@ final class SplashViewController: UIViewController {
 
 extension SplashViewController {
     private func createSplashLogo(safeArea: UILayoutGuide) {
-        view.backgroundColor = .black
+        view.backgroundColor = .ypBlack
         splashLogo = UIImageView()
         splashLogo.image = UIImage(named: "splash_screen_logo")
         splashLogo.contentMode = .scaleToFill
