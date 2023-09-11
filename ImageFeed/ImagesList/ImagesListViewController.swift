@@ -180,7 +180,7 @@ extension ImagesListViewController: ImagesListCellDelegate {
     
     private func showAlertViewController() {
         let alertViewController = UIAlertController(
-            title: "Что-то пошло не так(",
+            title: "Что-то пошло не так :(",
             message: "Не удалось поставить лайк",
             preferredStyle: .alert)
         let action = UIAlertAction(title: "Ок", style: .default)
