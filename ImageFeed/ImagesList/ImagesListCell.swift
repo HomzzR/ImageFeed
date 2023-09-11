@@ -25,6 +25,7 @@ final class ImagesListCell: UITableViewCell {
         dateLabel.textColor = .ypWhite
         return dateLabel
     }()
+    
     let cellImage: UIImageView = {
         let cellImage = UIImageView()
         cellImage.translatesAutoresizingMaskIntoConstraints = false
@@ -32,6 +33,7 @@ final class ImagesListCell: UITableViewCell {
         cellImage.layer.masksToBounds = true
         return cellImage
     }()
+    
     private let likeButton: UIButton = {
         let likeButton = UIButton()
         likeButton.translatesAutoresizingMaskIntoConstraints = false
@@ -80,12 +82,12 @@ final class ImagesListCell: UITableViewCell {
             dateLabel.leadingAnchor.constraint(equalTo: cellImage.leadingAnchor, constant: 5),
             dateLabel.trailingAnchor.constraint(equalTo: cellImage.trailingAnchor, constant: -8),
             dateLabel.bottomAnchor.constraint(equalTo: cellImage.bottomAnchor, constant: -8),
-            //--------------------------------------------------
+            
             likeButton.trailingAnchor.constraint(equalTo: cellImage.trailingAnchor),
             likeButton.topAnchor.constraint(equalTo: cellImage.topAnchor),
             likeButton.heightAnchor.constraint(equalToConstant: 42),
             likeButton.widthAnchor.constraint(equalToConstant: 42),
-            //--------------------------------------------------
+        
             cellImage.topAnchor.constraint(equalTo: topAnchor, constant: 4),
             cellImage.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -4),
             cellImage.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 16),
