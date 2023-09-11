@@ -8,7 +8,7 @@
 import UIKit
 
 final class ProfileService {
-    
+    // MARK: - Properties
     static let shared = ProfileService()
     private(set) var profile: Profile?
     
@@ -20,6 +20,8 @@ final class ProfileService {
     
     private var fetchProfileTask: URLSessionTask?
     private let urlSession = URLSession.shared
+    
+    // MARK: - Functions
     
     func fetchProfile(_ token: String, completion: @escaping (Result<Profile, Error>) -> Void) {
         fetchProfileTask?.cancel()
@@ -45,6 +47,8 @@ final class ProfileService {
         fetchProfileTask?.resume()
     }
 }
+
+// MARK: - Structures
 
 struct ProfileResult: Codable {
     let username: String

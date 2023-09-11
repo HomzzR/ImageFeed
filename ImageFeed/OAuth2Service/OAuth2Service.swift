@@ -8,7 +8,6 @@
 import UIKit
 
 final class OAuth2Service {
-    
     // MARK: - Private properties
     
     static let sharedService = OAuth2Service()

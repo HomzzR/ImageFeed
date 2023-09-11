@@ -7,15 +7,21 @@
 
 import UIKit
 
+// MARK: - Protocol
+
 protocol AuthViewControllerDelegate: AnyObject {
     func authViewController(_ vc: AuthViewController, didAuthenticateWithCode code: String)
 }
 
 final class AuthViewController: UIViewController {
+    // MARK: - Properties
+    
     private let showWebViewSegueIdentifier = "ShowWebView"
     let oauth2Service = OAuth2Service.sharedService
     weak var delegate: AuthViewControllerDelegate?
 
+    // MARK: - Functions
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == showWebViewSegueIdentifier {
             guard
