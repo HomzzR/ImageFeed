@@ -118,7 +118,7 @@ final class ProfileViewController: UIViewController {
         loginLabel = UILabel()
         loginLabel.textColor = .ypGray
         loginLabel.text = "@ekaterina_nov"
-        loginLabel.font = .systemFont(ofSize: 13)
+        loginLabel.font = .systemFont(ofSize: 13, weight: .regular)
         loginLabel.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(loginLabel)
         
@@ -171,12 +171,12 @@ final class ProfileViewController: UIViewController {
     }
     
     @objc private func logoutButtonTapped() {
-        let alert = UIAlertController(title: "Пока, пока!", message: "Уверены, что хотите выйти?", preferredStyle: .alert)
-        let noAction = UIAlertAction(title: "Нет", style: .cancel, handler: nil)
+        let alert = UIAlertController(title: "Уверены что хотите выйти?", message: "Оставайтесь!", preferredStyle: .alert)
         let yesAction = UIAlertAction(title: "Да", style: .default) { [weak self] _ in
             guard let self = self else {return}
             self.profileLogout()
         }
+        let noAction = UIAlertAction(title: "Нет", style: .cancel, handler: nil)
         alert.addAction(yesAction)
         alert.addAction(noAction)
         present(alert, animated: true, completion: nil)
