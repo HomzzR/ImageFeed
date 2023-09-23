@@ -104,6 +104,7 @@ final class ProfileViewController: UIViewController {
         nameLabel = UILabel()
         nameLabel.textColor = .ypWhite
         nameLabel.text = "Екатерина Новикова"
+        nameLabel.accessibilityIdentifier = "NameLabel"
         nameLabel.font = .boldSystemFont(ofSize: 23)
         nameLabel.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(nameLabel)
@@ -118,6 +119,7 @@ final class ProfileViewController: UIViewController {
         loginLabel = UILabel()
         loginLabel.textColor = .ypGray
         loginLabel.text = "@ekaterina_nov"
+        loginLabel.accessibilityIdentifier = "LoginNameLabel"
         loginLabel.font = .systemFont(ofSize: 13, weight: .regular)
         loginLabel.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(loginLabel)
@@ -148,6 +150,7 @@ final class ProfileViewController: UIViewController {
             target: self,
             action: nil
         )
+        logoutButton.accessibilityIdentifier = "LogoutButton"
         logoutButton.translatesAutoresizingMaskIntoConstraints = false
         logoutButton.addTarget(nil, action: #selector(logoutButtonTapped), for: .touchUpInside)
         view.addSubview(logoutButton)
