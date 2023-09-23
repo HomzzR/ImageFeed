@@ -38,7 +38,7 @@ final class SingleImageViewController: UIViewController {
         let backButton = UIButton()
         backButton.translatesAutoresizingMaskIntoConstraints = false
         backButton.setTitle("", for: .normal)
-        backButton.setImage(UIImage(named: "nav_back_button"), for: .normal)
+        backButton.setImage(UIImage(named: "chevron.backward"), for: .normal)
         backButton.imageView?.contentMode = .scaleAspectFill
         backButton.addTarget(nil, action: #selector(didTapBackButton), for: .touchUpInside)
         return backButton
