@@ -11,11 +11,9 @@ final class OAuth2Service {
     // MARK: - Private properties
     
     static let sharedService = OAuth2Service()
-    
     private let urlSession = URLSession.shared
     private var task: URLSessionTask?
     private var lastCode: String?
-    
     private let tokenStorage = OAuth2TokenStorage()
     private (set)  var authToken: String? {
         get {
@@ -30,7 +28,7 @@ final class OAuth2Service {
     
     func fetchOAuthToken(_ code: String, completion: @escaping(Result<String, Error>) -> Void ) {
         assert(Thread.isMainThread)
-        if lastCode == code { return }
+        if lastCode == code {return}
         task?.cancel()
         lastCode = code
         
@@ -58,7 +56,7 @@ final class OAuth2Service {
 // MARK: - Extensions
 
 extension OAuth2Service {
-    private func object( for request: URLRequest, completion: @escaping (Result<OAuthTokenResponseBody, Error>) -> Void) -> URLSessionTask {
+    private func object(for request: URLRequest, completion: @escaping (Result<OAuthTokenResponseBody, Error>) -> Void) -> URLSessionTask {
         let decoder = JSONDecoder()
         return urlSession.data(for: request) { (result: Result<Data, Error>) in
             let response = result.flatMap {data -> Result<OAuthTokenResponseBody, Error> in
@@ -71,9 +69,9 @@ extension OAuth2Service {
     private func authTokenRequest(code: String) -> URLRequest {
         URLRequest.makeHTTPRequest(
             path: "/oauth/token"
-            + "?client_id=\(accessKey)"
-            + "&&client_secret=\(secretKey)"
-            + "&&redirect_uri=\(redirectURI)"
+            + "?client_id=\(AccessKey)"
+            + "&&client_secret=\(SecretKey)"
+            + "&&redirect_uri=\(RedirectURI)"
             + "&&code=\(code)"
             + "&&grant_type=authorization_code",
             httpMethod: "POST"
@@ -93,7 +91,6 @@ extension OAuth2Service {
             case createdAt = "created_at"
         }
     }
-    
 }
 
 extension URLRequest {
