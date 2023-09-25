@@ -27,14 +27,14 @@ class ImageFeedUITests: XCTestCase {
         XCTAssertTrue(loginTextField.waitForExistence(timeout: 9))
         
         loginTextField.tap()
-        loginTextField.typeText("homzzr@yandex.ru")
+        loginTextField.typeText("******) // Вставьте свою почту
         app.toolbars["Toolbar"].buttons["Done"].tap()
         
         let passwordTextField = webView.descendants(matching: .secureTextField).element
         XCTAssertTrue(passwordTextField.waitForExistence(timeout: 10))
         
         passwordTextField.tap()
-        passwordTextField.typeText("Marsiane123#q1")
+        passwordTextField.typeText("********")  // Вставьте свой пароль
         app.toolbars["Toolbar"].buttons["Done"].tap()
         
         let loginButton = webView.descendants(matching: .button).element
@@ -50,7 +50,7 @@ class ImageFeedUITests: XCTestCase {
     func testFeed() throws {
         let tablesQuery = app.tables
         
-        let cell = tablesQuery.children(matching: .cell).element(boundBy: 0)
+        _ = tablesQuery.children(matching: .cell).element(boundBy: 0)
         tablesQuery.element.swipeUp()
         
         sleep(5)
