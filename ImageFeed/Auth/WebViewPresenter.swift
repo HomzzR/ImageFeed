@@ -5,7 +5,7 @@
 //  Created by Артем Калюжин on 23.09.2023.
 //
 
-import UIKit
+import Foundation
 import WebKit
 
 // MARK: - Protocol
