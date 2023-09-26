@@ -7,12 +7,14 @@
 
 import Foundation
 
-let AccessKey = "MA7HjNsnuWCbrbfL32ReSwNR0X9trFaLv9GNrWuDp_Y"
-let SecretKey = "aSrX6sFvnPuoSccN-4zjlvQfhHXeQy1x_ZZekMGrKag"
-let RedirectURI = "urn:ietf:wg:oauth:2.0:oob"
-let AccessScope = "public+read_user+write_likes"
-let DefaultBaseURL = URL(string: "https://api.unsplash.com")!
-let UnsplashAuthorizeURLString = "https://unsplash.com/oauth/authorize"
+enum Constants {
+    static let AccessKey: String = "MA7HjNsnuWCbrbfL32ReSwNR0X9trFaLv9GNrWuDp_Y"
+    static let SecretKey: String = "aSrX6sFvnPuoSccN-4zjlvQfhHXeQy1x_ZZekMGrKag"
+    static let RedirectURI: String = "urn:ietf:wg:oauth:2.0:oob"
+    static let AccessScope: String = "public+read_user+write_likes"
+    static let DefaultBaseURL = URL(string: "https://api.unsplash.com")!
+    static let UnsplashAuthorizeURLString: String = "https://unsplash.com/oauth/authorize"
+}
 
 struct AuthConfiguration {
     let accessKey: String
@@ -32,11 +34,11 @@ struct AuthConfiguration {
     }
     
     static var standard: AuthConfiguration {
-           return AuthConfiguration(accessKey: AccessKey,
-                                    secretKey: SecretKey,
-                                    redirectURI: RedirectURI,
-                                    accessScope: AccessScope,
-                                    authURLString: UnsplashAuthorizeURLString,
-                                    defaultBaseURL: DefaultBaseURL)
+        return AuthConfiguration(accessKey: Constants.AccessKey,
+                                 secretKey: Constants.SecretKey,
+                                 redirectURI: Constants.RedirectURI,
+                                 accessScope: Constants.AccessScope,
+                                 authURLString: Constants.UnsplashAuthorizeURLString,
+                                 defaultBaseURL: Constants.DefaultBaseURL)
        }
 }
